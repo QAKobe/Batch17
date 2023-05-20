@@ -5,6 +5,12 @@ public class Test {
 
         System.out.println("test git");
 
+        /*
+         In terminal type git --version
+
+         */
+
+
 
     }
 }
