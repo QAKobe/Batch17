@@ -1,0 +1,10 @@
+package git_purpose;
+
+public class Test {
+    public static void main(String[] args) {
+
+        System.out.println("test git");
+
+
+    }
+}
