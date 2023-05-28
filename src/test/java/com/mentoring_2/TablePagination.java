@@ -81,6 +81,8 @@ public class TablePagination {
 
     @Test()
     public void TC_03() throws InterruptedException {
+
+        // This test case will slide all sliders
         WebDriverManager.chromedriver().setup();
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--remote-allow-origins=*");
@@ -94,6 +96,7 @@ public class TablePagination {
         List<WebElement> allInputs = driver.findElements(By.xpath("//input[@type='range']"));
         List<WebElement> allOutPut = driver.findElements(By.cssSelector("output"));
 
+        // This loop slide all the sliders until 85
         for (int i = 0; i < allInputs.size(); i++) {
 
             while (!allOutPut.get(i).getText().equals("85")){
