@@ -72,7 +72,7 @@ public class TablePagination {
         TreeMap<String, Long> map = new TreeMap();
         for (int i = 0; i < allNames.size(); i++) {
 
-            map.put(BrowserUtils.getText(allNames.get(i)), Long.valueOf(BrowserUtils.getText(allNumbers.get(i)).replace("-","")));
+            map.put(BrowserUtils.getText(allNames.get(i)), Long.valueOf(BrowserUtils.getText(allNumbers.get(i)).replace("-", "")));
 
         }
         System.out.println(map);
@@ -99,10 +99,10 @@ public class TablePagination {
         // This loop slide all the sliders until 85
         for (int i = 0; i < allInputs.size(); i++) {
 
-            while (!allOutPut.get(i).getText().equals("85")){
-                if (allOutPut.get(i).getText().equals("85")){
+            while (!allOutPut.get(i).getText().equals("85")) {
+                if (allOutPut.get(i).getText().equals("85")) {
                     break;
-                }else {
+                } else {
                     allInputs.get(i).sendKeys(Keys.ARROW_RIGHT);
                 }
             }
@@ -110,6 +110,27 @@ public class TablePagination {
         }
 
 
+    }
+
+    // Single slide
+    @Test()
+    public void TC_04() {
+        WebDriverManager.chromedriver().setup();
+        ChromeOptions options = new ChromeOptions();
+        options.addArguments("--remote-allow-origins=*");
+        WebDriver driver = new ChromeDriver(options);
+        driver.get("https://www.lambdatest.com/selenium-playground/");
+        driver.manage().window().maximize();
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+
+        driver.findElement(By.xpath("//a[contains(.,'Drag & Drop Sliders')]")).click();
+
+        WebElement singleSlide = driver.findElement(By.xpath("//input[@value='5']"));
+        WebElement singleSlideOutPut = driver.findElement(By.xpath(" //output[@id='range']"));
+        System.out.println(singleSlide.getText());
+        while (!singleSlideOutPut.getText().equals("99")) {
+            singleSlide.sendKeys(Keys.ARROW_RIGHT);
+        }
 
     }
 
