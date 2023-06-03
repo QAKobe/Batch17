@@ -7,6 +7,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.interactions.Actions;
 import org.testng.annotations.Test;
 
 import java.time.Duration;
@@ -37,11 +38,11 @@ public class Sliders {
     }
 
 
-
+    // This test case will slide all sliders
     @Test()
     public void TC_03() throws InterruptedException {
 
-        // This test case will slide all sliders
+
         WebDriverManager.chromedriver().setup();
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--remote-allow-origins=*");
@@ -67,6 +68,8 @@ public class Sliders {
             }
 
         }
+
+
 
 
     }
