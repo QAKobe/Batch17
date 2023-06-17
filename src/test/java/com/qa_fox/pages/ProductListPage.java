@@ -17,14 +17,14 @@ public class ProductListPage {
     WebElement sortDropDown;
 
     @FindBy(xpath = "//p[contains(.,'Stop')]//..//following-sibling::div")
-    WebElement laptopHP;
+    WebElement addLaptopHP;
 
 
 
     public void chooseHP(){
 
         BrowserUtils.selectBy(sortDropDown, "Price (Low > High)", "text");
-        laptopHP.click();
+        addLaptopHP.click();
     }
 
 }

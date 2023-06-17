@@ -15,8 +15,8 @@ public class SingleProductPage {
     @FindBy(xpath = "//button[@id='button-cart']")
     WebElement addToCartBtn;
 
-    @FindBy(xpath = "//div[@id='cart']")
-    WebElement cartButton;
+//    @FindBy(xpath = "//div[@id='cart']")
+//    WebElement cartButton;
 
     @FindBy(xpath = "//a[contains(@href,'route=checkout/checkout')]")
     WebElement checkoutBtn;
@@ -25,7 +25,7 @@ public class SingleProductPage {
 
         addToCartBtn.click();
 
-        cartButton.click();
+//        cartButton.click();
 
         checkoutBtn.click();
     }
