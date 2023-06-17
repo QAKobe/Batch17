@@ -53,8 +53,8 @@ public class Sliders {
 
         driver.findElement(By.xpath("//a[contains(.,'Drag & Drop Sliders')]")).click();
 
-        List<WebElement> allInputs = driver.findElements(By.xpath("//input[@type='range']"));
-        List<WebElement> allOutPut = driver.findElements(By.cssSelector("output"));
+        List<WebElement> allInputs = driver.findElements(By.xpath("//input[@type='range']")); // this will be used in the loop stopping condition
+        List<WebElement> allOutPut = driver.findElements(By.cssSelector("output")); // this will retrieve a text for comparison
 
         // This loop slide all the sliders until 85
         for (int i = 0; i < allInputs.size(); i++) {

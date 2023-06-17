@@ -1,0 +1,22 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="Smoke Suite">
+    <test name="trial">
+        <parameter name="firstName" value="Kobe"/>
+        <parameter name="lastName" value="abdy"/>
+        <parameter name="email" value="kobe@gmail.com"/>
+        <parameter name="cell" value="312332211"/>
+        <parameter name="company" value="Business"/>
+        <parameter name="address1" value="Test st 1"/>
+        <parameter name="address2" value="Test st 2"/>
+        <parameter name="city" value="Chitown"/>
+        <parameter name="zipCode" value="60656"/>
+        <parameter name="message" value="Your order has been placed!"/>
+        <classes>
+            <class name="com.qa_fox.tests.QaFoxScript">
+                <methods>
+                    <exclude name="testMethod"></exclude>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
